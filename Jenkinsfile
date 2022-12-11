@@ -10,7 +10,7 @@ node('master')
 	}
     stage('Download') 
 	{
-    	git branch: 'master', url: 'https://github.com/UjjalKrRoy/Tours-and-Travels.git'
+    	git 'https://github.com/UjjalKrRoy/Tours-and-Travels.git'
 	}
     stage('Deployment') 
 	{
