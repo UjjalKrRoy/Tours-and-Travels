@@ -2,7 +2,7 @@ node('master')
 {
     stage('Remove project content') 
 	{
-    	sh label: '', script: 'rm -rf /var/lib/jenkins/workspace/HTML-Project/*'
+    	sh label: '', script: 'rm -rf /var/lib/jenkins/workspace/WebProject_master*'
 	}
     stage('Remove html root') 
 	{
@@ -14,7 +14,7 @@ node('master')
 	}
     stage('Deployment') 
 	{
-    	sh label: '', script: 'cp -r /var/lib/jenkins/workspace/HTML-Project/* /var/www/html/'
+    	sh label: '', script: 'cp -r /var/lib/jenkins/workspace/WebProject_master* /var/www/html/'
 	}
     stage('Restart web service') 
 	{
